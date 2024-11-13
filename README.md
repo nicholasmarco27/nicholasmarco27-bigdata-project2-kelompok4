@@ -74,6 +74,75 @@ a) **Run api.py**
 python3 api.py
 ```
 
+a) **Request dan Response**
+
+### Model 1 `/loanstatus`
+
+#### Request : 
+```
+curl -X POST http://127.0.0.1:5000/loanstatus -H "Content-Type: application/json" -d '{
+    "Current Loan Amount": 50000,
+    "Credit Score": 700,
+    "Annual Income": 55000,
+    "Monthly Debt": 1500,
+    "Years of Credit History": 10,
+    "Number of Open Accounts": 5,
+    "Current Credit Balance": 20000,
+    "Maximum Open Credit": 30000
+}
+```
+
+#### Response : 
+```
+{
+    "prediction": 1
+}
+```
+
+### Model 2 `/creditscore`
+
+#### Request : 
+```
+curl -X POST http://127.0.0.1:5000/creditscore -H "Content-Type: application/json" -d '{
+    "Current Loan Amount": 50000,
+    "Annual Income": 55000,
+    "Monthly Debt": 1500,
+    "Years of Credit History": 10,
+    "Number of Open Accounts": 5,
+    "Current Credit Balance": 20000,
+    "Maximum Open Credit": 30000
+}
+```
+
+#### Response : 
+```
+{
+    "prediction": 720.5
+}
+```
+
+### Model 3 `/maxopencredit`
+
+#### Request : 
+```
+curl -X POST http://127.0.0.1:5000/maxopencredit -H "Content-Type: application/json" -d '{
+    "Current Loan Amount": 50000,
+    "Credit Score": 700,
+    "Annual Income": 55000,
+    "Monthly Debt": 1500,
+    "Years of Credit History": 10,
+    "Number of Open Accounts": 5,
+    "Current Credit Balance": 20000
+}
+```
+
+#### Response : 
+```
+{
+    "prediction": 45000.0
+}
+```
+
 
 
 
