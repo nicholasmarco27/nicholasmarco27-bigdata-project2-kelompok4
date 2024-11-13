@@ -10,6 +10,8 @@
 | Nicholas Marco Weinandra   | 5027221042            |
 | Stephanie Hebrina          | 5027221069            |
 
+## Architecture
+![archi](archi.png)
 ## Fitur Utama
 
 ### 1. **Kafka Producer**

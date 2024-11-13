@@ -29,7 +29,7 @@ for message in consumer:
     if len(batch) >= batch_size or (datetime.now() - start_time) >= time_window:
         # Save batch as a CSV file
         df = pd.DataFrame(batch)
-        df.to_csv(f'{save_directory}/batch_{batch_count+1}}.csv', index=False)
+        df.to_csv(f'{save_directory}/batch_{batch_count+1}.csv', index=False)
         
         # Clear batch and reset time
         batch = []
